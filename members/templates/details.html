@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+    {% block title %}Details{% endblock %}
+
+{% block body %}
+<div class="mycard">
+    <h1> {{ member.firstname }} {{ member.lastname }}</h1>
+
+    <p> Phone: {{ member.contactNumber }} </p>
+    <p> {{ member.firstname }} is a member since {{ member.joinDate }} </p>
+</div>
+<a class="a" href="{% url 'members' %}">Back to members list</a>
+{% endblock %}

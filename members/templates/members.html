@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+    {% block title %}Members{% endblock %}
+    {% block body %}
+    <div class="mycard">
+        <h1>Members</h1>
+        <ul>
+          {% for member in members %}
+            <li onclick="window.location = 'details/{{ member.id }}'">{{ member.firstname }} {{ member.lastname }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endblock %}
